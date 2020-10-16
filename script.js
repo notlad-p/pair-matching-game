@@ -159,11 +159,22 @@ function cardMatch(){
       });
 
       setTimeout(function(){
-        firstCard.classList.remove('active');
-        secondCard.classList.remove('active');
+        if (firstCard.classList.contains('matched') || secondCard.classList.contains('matched')) {
+          console.log('first or second contains matched')
 
+        }
         cardContainer.forEach(function(card){
-          card.addEventListener('click', flipCard);
+          if (!card.classList.contains('matched')) {
+            card.addEventListener('click', flipCard);
+          }
+          if(firstCard.classList.contains('matched') && !secondCard.classList.contains('matched')) {
+            secondCard.classList.remove('active');
+          } else if(!firstCard.classList.contains('matched') && secondCard.classList.contains('matched')) {
+            firstCard.classList.remove('active');
+          } else {
+            firstCard.classList.remove('active');
+            secondCard.classList.remove('active');
+          }
         });
       }, 1000);    
     }

@@ -9,11 +9,13 @@ body {
   width: 600px;
   margin: 50px auto;
   padding-bottom: 10px;
-  border: 2px solid #00adb5;
+  border: 2px solid #eeeeee;
   border-radius: 10px;
   text-align: center;
   color: #eeeeee;
-  background-color: #222831;
+  background: linear-gradient(45deg, #064273, #1da2d8, #7fcdff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 .win {
@@ -39,7 +41,7 @@ body {
 }
 
 .title {
-  text-decoration: underline #00adb5;
+  text-decoration: underline #eeeeee;
 }
 
 /* Card Styling */
@@ -111,6 +113,18 @@ body {
   75% {
     transform: rotate(-5deg);
   }
+}
+
+@keyframes gradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @media only screen and (max-width: 600px){
