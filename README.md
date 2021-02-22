@@ -5,3 +5,9 @@ Sea themed pair matching game using the [Fisher Yates](https://en.wikipedia.org/
 <a href='https://notlad-p.github.io/pair-matching-game/' >
 	![enter image description here](https://raw.githubusercontent.com/notlad-p/react-portfolio/master/src/assets/imgs/projects/pairmatching.JPG)
 </a>
+
+## Built With
+
+ - HTML
+ - CSS
+ - JavaScript
